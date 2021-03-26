@@ -1,12 +1,3 @@
-/*const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => res.send('Hello World!'));
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
-*/
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require("fs");
@@ -75,7 +66,4 @@ client.on('message', message => {
   message.channel.send("https://discord.com/oauth2/authorize?client_id=814232628177141770&scope=bot&permissions=8")
 }})
 
-// You really don't want your token here since your repl's code
-// is publically available. We'll take advantage of a Repl.it 
-// feature to hide the token we got earlier. 
 client.login(process.env.DISCORD_TOKEN);
